@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/employeeDB', { useNewUrlParser: true, useUnifiedTopology: true });
+
+mongoose.connect('mongodb+srv://seenu100babu:TCymtpQIWoXHtzqt@mycluster1.bekzbtz.mongodb.net/employeeDB');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
